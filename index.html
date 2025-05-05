@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroWeather - Crop Recommendation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-seedling"></i> AgroWeather</h1>
+            <p>Get real-time weather data and optimal crop recommendations for your location</p>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="city-input" placeholder="Enter city name...">
+            <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+            <button id="location-btn"><i class="fas fa-location-arrow"></i> Use My Location</button>
+        </div>
+
+        <div class="weather-container">
+            <div class="weather-card">
+                <div class="weather-header">
+                    <h2 id="city-name">Search for a city</h2>
+                    <div class="weather-icon" id="weather-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </div>
+                <div class="weather-details">
+                    <div class="temp" id="temperature">--°C</div>
+                    <div class="description" id="weather-description">--</div>
+                    <div class="details-grid">
+                        <div><i class="fas fa-temperature-high"></i> <span id="temp-max">--°C</span></div>
+                        <div><i class="fas fa-temperature-low"></i> <span id="temp-min">--°C</span></div>
+                        <div><i class="fas fa-tint"></i> <span id="humidity">--%</span></div>
+                        <div><i class="fas fa-wind"></i> <span id="wind-speed">-- m/s</span></div>
+                        <div><i class="fas fa-cloud-rain"></i> <span id="rain">-- mm</span></div>
+                        <div><i class="fas fa-calendar-day"></i> <span id="date">--</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="crop-card">
+                <h2><i class="fas fa-tractor"></i> Crop Recommendations</h2>
+                <div class="crop-content" id="crop-recommendations">
+                    <p>Search for a location to get crop recommendations based on current weather conditions.</p>
+                </div>
+                <div class="soil-tip" id="soil-tip">
+                    <h3><i class="fas fa-info-circle"></i> Soil Tip</h3>
+                    <p>Waiting for location data...</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Data provided by OpenWeatherMap</p>
+            <p>© 2023 AgroWeather | Agricultural Advisory System</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
